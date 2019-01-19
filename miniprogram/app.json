@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main",
+    "pages/list/list",
+    "pages/setting/setting",
+    "pages/user/user",
+    "pages/details/details",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "搬砖工那些事儿",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "grep",
+    "selectedColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_select.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "iconPath": "images/list.png",
+        "selectedIconPath": "images/list_select.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "images/setting.png",
+        "selectedIconPath": "images/setting_select.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

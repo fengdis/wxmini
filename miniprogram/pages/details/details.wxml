@@ -1,0 +1,29 @@
+<view class="content">
+  
+
+  <text class="title">{{dataInfo.title}}</text>
+  <image class="image" src="{{dataInfo.picture}}"></image>
+  <text class="article-content">{{dataInfo.html_material}}</text>
+
+  <view class="author-date">
+    <image src="{{dataInfo.user_picture}}" class="author"></image>
+    <text class="date">{{dataInfo.account}}</text>
+  </view>
+  <view class="tag">
+    <image class="article-images" src="../../images/author.jpg"></image>
+    <text class="article-text">{{dataInfo.account}}</text>
+
+    <image class="article-images" src="../../images/tag.jpg"></image>
+    <text class="article-text">{{dataInfo.tagName}}</text>
+
+    <image class="article-images" src="../../images/date.jpg"></image>
+    <text class="article-text">{{dataInfo.createdate}}</text>
+
+    <image class="article-images" src="../../images/view.jpg"></image>
+    <text class="article-text">{{dataInfo.praise}}</text>
+
+    <image class="article-images" src="../../images/praise.jpg"></image>
+    <text class="article-text">{{dataInfo.praise}}</text>
+
+  </view>
+</view>
