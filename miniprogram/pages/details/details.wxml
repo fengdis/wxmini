@@ -1,6 +1,5 @@
 <view class="content">
   
-
   <text class="title">{{dataInfo.title}}</text>
   <image class="image" src="{{dataInfo.picture}}"></image>
   <text class="article-content">{{dataInfo.html_material}}</text>
