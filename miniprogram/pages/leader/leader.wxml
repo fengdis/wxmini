@@ -1,0 +1,42 @@
+<view class="container">
+  <!-- <view class="page__hd">
+        <view class="page__hd-pagetitle center">首页</view>
+  </view> -->
+    
+   <!--轮播图-->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="index" wx:for-item="item" >
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <scroll-view class="page__bd" wx:for="{{articles}}" wx:key="index" wx:for-item="item" scroll-y="true">
+            <navigator url="authors/authors" hover-class="none">
+            <view class="page__bd-head">
+                <view class="head-img">
+                    <image class="pic" src="https://www.fengdis.com{{item.avatar}}" mode="aspectFill" />
+                </view>
+                <view class="artic-author page-flex">{{item.nickname}}</view>
+            </view>
+            </navigator>
+            <navigator url="stories/stories?articleId={{item.id}}">
+            <view class="page__bd-banner center">
+                <image class="bannerImg" src="https://www.fengdis.com{{item.picture}}" alt="" mode="aspectFill" />
+            </view>
+            <view class="page__bd-middle">
+                <view class="artic-title">{{item.title}}</view>
+                <view class="artic-content">{{item.material}}</view>
+            </view>
+            <view class="page__bd-foot">
+                <view class="foot-lt clickTimes fl page-flex">{{item.pageview}}次点击</view>
+                <view class="foot-rt thumbUp">{{item.praise}}
+                    <view class="finger">
+                        <image src="../../assets/images/pointer.png" mode="aspectFill" />
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </scroll-view>
+</view>

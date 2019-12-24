@@ -1,0 +1,104 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+
+  <view class="page__hd">
+        <view class="page__hd-tp">编辑</view>
+
+        <!-- 点击微信手机号码授权 -->
+        <button disabled="{{ztBool}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+          一键微信登陆
+        </button>
+        
+        <!-- <view class="page__hd-md center">
+            <image src="{{avatarUrl}}" />
+        </view> -->
+        <button
+          open-type="getUserInfo" 
+          bindgetuserinfo="onGetUserInfo"
+          class="userinfo-avatar center"
+          style="background-image: url({{avatarUrl}})"
+        ></button>
+        
+        <view class="page-username center">{{userInfo.nickname}}</view>
+        <view class="page__hd-bt page-flex">
+            <view class="page-bt-lt">
+                <view class="page-lt-readingtimes">{{userInfo.city}}</view>
+                <view class="page-lt-readingtime">城市</view>
+            </view>
+            <view class="cline">|</view>
+            <view class="page-bt-rt">
+                <view class="page-rt-lt">
+                    <view class="page-rt-numbers">{{userInfo.gender == 1 ? "男" : userInfo.gender == 0 ? "女" : "未知"}}</view>
+                    <view class="page-rt-items">性别</view>
+                </view>
+            </view>
+            <view class="page-rg"></view>
+        </view>
+    </view>
+    <view class="page__bd">
+        <view class="page__bd-items page-flex" bindtap="toNews">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/news.png" />
+            </view>
+            <view class="page-items-md">我的消息</view>
+            <view class="page-items-others">10</view>
+            <view class="page-items-ft">></view>
+        </view>
+        <view class="page__bd-items page-flex">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/booklist.png" />
+            </view>
+            <view class="page-items-md">我的留言</view>
+            <view class="page-items-others">写留言</view>
+            <view class="page-items-ft">></view>
+        </view>
+        <view class="page__bd-items page-flex">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/sets.png" />
+            </view>
+            <view class="page-items-md">设置</view>
+            <view class="page-items-others"></view>
+            <view class="page-items-ft">></view>
+        </view>
+        <!-- <web-view frameborder="0" border="1"
+                marginwidth="0" marginheight="0"
+                width="90%" height="77"
+                src="//music.163.com/outchain/player?type=2&id=1295675823&auto=0&height=66"> 
+        </web-view> -->
+        
+        <!-- <view class="page__bd-items page-flex">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/note.png" />
+            </view>
+            <view class="page-items-md">我的笔记</view>
+            <view class="page-items-others">8</view>
+            <view class="page-items-ft">></view>
+        </view>
+        <view class="page__bd-items page-flex">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/fans.png" />
+            </view>
+            <view class="page-items-md">关注·粉丝</view>
+            <view class="page-items-others"></view>
+            <view class="page-items-ft">></view>
+        </view>
+        <view class="page__bd-items page-flex">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/times.png" />
+            </view>
+            <view class="page-items-md">购买时长</view>
+            <view class="page-items-others"></view>
+            <view class="page-items-ft">></view>
+        </view>
+        <view class="page__bd-items page-flex">
+            <view class="page-items-lt">
+                <image src="../../assets/images/mines/update.png" />
+            </view>
+            <view class="page-items-md">更新续订</view>
+            <view class="page-items-others">点我找回阅读时长</view>
+            <view class="page-items-ft">></view>
+        </view> -->
+    </view>
+  
+
+</view>

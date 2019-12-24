@@ -1,0 +1,59 @@
+<!--pages/stories/stories.wxml-->
+<view class="container">
+    <view class="page__hd">
+        <view class="page__hd-title">
+            {{article.title}}
+        </view>
+        <view class="page__hd-wrp">
+            <view class="author-info page-flex">
+                <image src="https://www.fengdis.com{{article.user_picture}}"></image>
+                <view class="author-name">{{article.nickname}}
+                    <view class="author-des">{{article.introduction}}</view>
+                </view>
+                <view class="follow">
+                    关注
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="page__bd">
+        <view class="article-content">
+          <image src="https://www.fengdis.com{{article.picture}}"></image>
+          <text>{{article.html_material}}
+          </text>
+        </view>
+    </view>
+
+    <view class="tuijian">书籍推荐</view>
+    <view class="page-items page-flex">
+        <view class="bookImg">
+            <image src="{{item.bookCover}}" />
+        </view>
+        <view class="info">{{item.bookName}}
+            <view class="author">{{article.nickname}}
+                <view class="readers">{{article.pageview}}人在读 ></view>
+            </view>
+        </view>
+        <view class="readbtn">开始阅读</view>
+    </view>
+    <view class="log page-flex">
+        <view class="updateTime">更新于{{article.createdate}}</view>
+        <text>举报</text>
+    </view>
+    <view class="btnThumb">
+        <image src="../../../../assets/images/thumb.png" /> 用生命点赞
+    </view>
+    <!-- <view>10人点赞</view>   -->
+    <view class="page__bt page-flex">
+        <view class="bottom-items">
+            <image src="../../../../assets/images/share.png" />
+        </view>
+        <view class="bottom-items">
+            <image src="../../../../assets/images/like.png" />
+        </view>
+        <view class="bottom-items">
+            <image src="../../../../assets/images/news.png" />
+        </view>
+    </view>
+</view>

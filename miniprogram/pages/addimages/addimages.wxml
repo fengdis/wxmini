@@ -1,0 +1,45 @@
+<view class='list'>
+    <block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+      <view class="list_item">
+          <view class='info'>
+            <view class='text'>{{item.text}}</view>
+            <view class="user">
+              <image src="https://www.fengdis.com{{item.picture}}" class="picture"></image>
+              <text class="time">{{item.account}} - {{item.createdate}}</text>
+            </view>
+          </view>
+      </view>
+    </block>
+  </view>
+
+<!--输入文本域  -->
+<view class="text-box">
+    <textarea placeholder="您好，请您留下宝贵的建议..." placeholder-style="color:#666;font-size:30rpx; "  value="{{textareaVal}}"    bindinput="textareaFn"></textarea>
+</view>
+<!--上传图片  -->
+<view class="upload-img">
+  <view class="imgs-style" wx:for="{{arrimg}}" wx:key="key">
+      <view class="close" bindtap="closeImgFn"  id="{{index}}">
+              <image src="/assets/images/close.png"></image>
+        </view>
+      <image src="{{item}}" data-id="{{index}}"></image>
+  </view>
+  <image src="/assets/images/upload.png" bindtap="chooseimage" bindtouchstart=""></image>
+  
+  <text>{{index}}/{{len}}</text>
+</view>
+<!--温馨提示  -->
+<view class="prompt">
+<text>温馨提示:</text>
+<text>请在您的发言中不要涉及到政治性言论，并且不要使用攻击性，侮辱性语言；请尊重网上道德，遵守《全国人大常委会关于维护互联网安全的决定》及中华人民共和国其他各项有关法律法规，谢谢！ 
+并且，您同意无条件遵守以下条款：
+严禁发表危害国家安全、破坏民族团结、破坏国家宗教政策、破坏社会稳定、侮辱、诽谤、教唆、淫秽等内容的作品
+承担一切因您的行为而直接或间接导致的民事或刑事法律责任
+本网站各版的版主有权保留或删除其管辖版中的任意内容
+您在本网站发表的作品，管理者有权在网站内免费转载或引用
+本贴提交者发言纯属个人意见，与本网站立场无关
+上述内容如涉嫌有知识产权等纠纷，本网站不承担任何相应的法律责任。</text>
+<text>如有需要请点击上方上传图片。</text>
+</view>
+<!-- 下一步-->
+<view class="next-step" bindtap="submitFn"><text>下一步</text></view>

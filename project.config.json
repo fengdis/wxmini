@@ -6,11 +6,14 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"enhance": true
 	},
 	"appid": "wx346d99f92ac9a3b3",
-	"projectname": "wxmini",
-	"libVersion": "2.2.5",
+	"projectname": "fengdis_wxmini",
+	"libVersion": "2.8.1",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

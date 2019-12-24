@@ -1,0 +1,13 @@
+<view>
+    <view>
+        <view class="page-search"></view>
+        <scroll-view wx:for="{{stacks}}" wx:key="index" scroll-y="true">
+            <navigator class="stack-view " url="booklist/booklist?id={{index}}">
+                <image src="https://www.fengdis.com{{item.picture}}" class="stack-image"></image>
+                <view class="stack-name">{{item.nickname}}</view>
+                <view class="stack-numb">{{item.level}} ></view>
+            </navigator>
+            <view class="line"></view>
+        </scroll-view>
+    </view>
+</view>
